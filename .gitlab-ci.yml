@@ -28,7 +28,7 @@ parse:
 
 deploy-prod:
     rules:
-    - if: ${MODEL_VERSION} == 'assignment' && ${MODEL_STAGE} == 'prod'
+    - if: $MODEL_VERSION == 'assignment' && $MODEL_STAGE == 'prod'
     
     script: 
     - echo "DEPLOY - to PROD environment"

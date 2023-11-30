@@ -18,10 +18,10 @@ parse:
   - pip install gto
   
   # This job parses the modol tag to identify model registry actions
-  - export MODEL_NAME="$(gto check-ref pool-segmentation#prod#2 --name)"
-  - export MODEL_VERSION="$(gto check-ref pool-segmentation#prod#2 --version)"
-  - export MODEL_EVENT="$(gto check-ref pool-segmentation#prod#2 --event)"
-  - export MODEL_STAGE="$(gto check-ref pool-segmentation#prod#2 --stage)"
+  - export MODEL_NAME="$(gto check-ref ${CI_COMMIT_TAG} --name)"
+  - export MODEL_VERSION="$(gto check-ref ${CI_COMMIT_TAG} --version)"
+  - export MODEL_EVENT="$(gto check-ref ${CI_COMMIT_TAG} --event)"
+  - export MODEL_STAGE="$(gto check-ref ${CI_COMMIT_TAG} --stage)"
 
   - echo "MODEL_NAME - ${MODEL_NAME}" 
   - echo "MODEL_VERSION - ${MODEL_VERSION}" 

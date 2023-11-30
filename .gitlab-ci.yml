@@ -33,8 +33,8 @@ deploy-model:
   needs:
   - parse
 
-  rules:
-  - if: $MODEL_VERSION == 'assignment' && $MODEL_STAGE == 'prod'
+  # rules:
+  # - if: $MODEL_VERSION == 'assignment' && $MODEL_STAGE == 'prod'
   
   script: 
   - echo "DEPLOY - to PROD environment"

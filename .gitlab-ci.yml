@@ -36,6 +36,6 @@ deploy-prod:
     - echo "MODEL_NAME  ${MODEL_NAME}"
     - echo "MODEL_VERSION  ${MODEL_VERSION}"
     
-    - echo "dvc config --global studio.token ${{ secrets.DVC_STUDIO_TOKEN }}
-    - echo "dvc artifacts get  ${CI_REPOSITORY_URL} ${MODEL_NAME} --rev ${MODEL_VERSION}
+    - echo "dvc config --global studio.token ${DVC_STUDIO_TOKEN }"
+    - echo "dvc artifacts get  ${CI_REPOSITORY_URL} ${MODEL_NAME} --rev ${MODEL_VERSION}"
     - echo "The right model is available and you can use the rest of this command to deploy it. Good job!"
